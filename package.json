@@ -1,0 +1,38 @@
+{
+  "name": "gulp-preview-cshtml",
+  "version": "0.0.1",
+  "description": "Preview for cshtml ",
+  "license": "MIT",
+  "repository": "maciejkorsan/gulp-preview-cshtml",
+  "author": {
+    "name": "Maciej Korsan",
+    "email": "maciek@polarbits.co",
+    "url": "polarbits.co"
+  },
+  "engines": {
+    "node": ">=4.5"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "cshtml",
+    "razor",
+    "umbraco"
+  ],
+  "dependencies": {
+    "through2": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "p-event": "^1.1.0",
+    "vinyl-sourcemaps-apply": "^0.2.1",
+    "xo": "*"
+  }
+}
