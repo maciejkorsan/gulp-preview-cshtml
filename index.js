@@ -23,7 +23,7 @@ module.exports = function(opts) {
             // file.contents is a Buffer - https://nodejs.org/api/buffer.html
             let content = file.contents.toString();
 
-            const lines = new RegExp('@[a-zA-Z].+',"gm");
+            const lines = new RegExp('[^a-z]@[a-zA-Z].+',"gm");
             const comments = new RegExp('@\\*[^\\*]+\\*@',"gm");
             const blocks = new RegExp('@{[^}]+}',"gm");
             let layout = fs.readFileSync(opts);
@@ -34,9 +34,6 @@ module.exports = function(opts) {
             layout = layout.replace(comments,'');
             layout = layout.replace(blocks,'');
             layout = layout.replace(lines,'');
-
-
-            console.log(layout);
 
             file.contents =  Buffer.from( layout, 'utf8' );            
 
