@@ -1,6 +1,6 @@
 {
   "name": "gulp-preview-cshtml",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Preview for cshtml ",
   "license": "MIT",
   "repository": "maciejkorsan/gulp-preview-cshtml",
