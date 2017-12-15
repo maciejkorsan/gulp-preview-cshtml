@@ -40,7 +40,7 @@ module.exports = function(opts, projectSource) {
             let match = includes.exec(layout);
             while (match != null) {
                 let filename = match[1].replace('.cshtml', '.ref.cshtml');
-                
+                filename = filename.replace('~','');
                 let partial = fs.readFileSync(projectSource+''+filename);
                 
                 layout = layout.replace(match[0],partial.toString());
